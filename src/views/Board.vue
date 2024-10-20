@@ -186,4 +186,13 @@ hr {
   background-color: #ffffff17;
 }
 
+@media only screen and (max-width: 740px){
+	.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+}
+
 </style>
