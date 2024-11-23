@@ -7,3 +7,6 @@ I programmed with Vue a taskboard like Trello.
 - HTML
 - CSS
 - JavaScript
+
+Containerization:
+- Docker
