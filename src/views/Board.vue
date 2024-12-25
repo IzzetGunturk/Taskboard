@@ -13,6 +13,7 @@ export default {
         { title: '🔨 In progress', tasks: [], newTask: '' },
         { title: '🧐 In review', tasks: [], newTask: '' },
         { title: '✅ Done', tasks: [], newTask: '' },
+        { title: 'Fill in a task...', tasks: [], newTask: '' },
       ]
     };
   },
@@ -90,9 +91,10 @@ export default {
 <style>
 .addTableContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 64px;
 }
 
 .buttonAddTable {
@@ -119,12 +121,13 @@ export default {
 }
 
 .container {
+  padding: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 30px;
-  padding: 30px;
+  gap: 32px;
 }
 
 .titleSection {
