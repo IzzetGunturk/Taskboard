@@ -67,7 +67,7 @@ export default {
           </svg>
         </div>
       </div>
-      <draggable v-model="column.tasks" group="tasks" class="tasks">
+      <draggable v-model="column.tasks" itemKey="id" group="tasks" class="tasks">
         <template #item="{ element: task }">
           <div class="task">
             <div class="iconContainer">
