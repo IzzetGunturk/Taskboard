@@ -8,5 +8,8 @@ I programmed with Vue a taskboard like Trello.
 - CSS
 - JavaScript
 
+Unit test:
+- Jest
+
 Containerization:
 - Docker
