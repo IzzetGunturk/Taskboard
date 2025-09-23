@@ -23,6 +23,7 @@ export default {
       if (column.newTask !== '') {
         column.tasks.push(column.newTask);
         column.newTask = '';
+        this.saveToLocaleStorage();
       }
       else {
         alert('Fill in a task...')
@@ -32,16 +33,30 @@ export default {
     deleteTask(columnIndex, taskIndex) {
       const column = this.columns[columnIndex] // finding the colom
       column.tasks.splice(taskIndex, 1);
+      this.saveToLocaleStorage();
     },
 
     addTable() {
       this.columns.push([])
+      this.saveToLocaleStorage();
     },
 
     deleteTable(index) {
-      this.columns.splice(index, 1)
+      this.columns.splice(index, 1);
+      this.saveToLocaleStorage();
+    },
+
+    saveToLocaleStorage() {
+      localStorage.setItem('columns', JSON.stringify(this.columns));
+    }, 
+  },
+
+  mounted() {
+    const savedColumns = localStorage.getItem('columns');
+
+    if (savedColumns) {
+      this.columns = JSON.parse(savedColumns);
     }
-    
   }
 };
 </script>
