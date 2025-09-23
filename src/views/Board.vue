@@ -20,13 +20,14 @@ export default {
   methods: {
     addTask(columnIndex) {
       const column = this.columns[columnIndex] // finding the colom
-      if (column.newTask !== '') {
+      if (column.newTask !== '' && column.newTask !== null && column.newTask !== undefined) {
         column.tasks.push(column.newTask);
         column.newTask = '';
         this.saveToLocaleStorage();
       }
       else {
         alert('Fill in a task...')
+        return;
       }
     },
 

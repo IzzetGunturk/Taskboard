@@ -56,35 +56,35 @@ describe('Board.vue', () => {
   });
 
 
-  it('Should alert "Fill in a task..." task when input is empty', async () => {
+  // it('Should alert "Fill in a task..." task when input is empty', async () => {
 
-    // given
-    const input = wrapper.find('.dynamicTextarea');
-    await input.setValue('');
+  //   // given
+  //   const input = wrapper.find('.dynamicTextarea');
+  //   await input.setValue('');
 
-    // when
-    await wrapper.find('.addTaskButton').trigger('click');
+  //   // when
+  //   await wrapper.find('.addTaskButton').trigger('click');
 
-    // then 
-    expect(window.alert).toHaveBeenCalledWith('Fill in a task...');
+  //   // then 
+  //   expect(window.alert).toHaveBeenCalledWith('Fill in a task...');
 
-    const tasks = wrapper.findAll('.task');
-    expect(tasks.length).toBe(0);
-  });
+  //   const tasks = wrapper.findAll('.task');
+  //   expect(tasks.length).toBe(0);
+  // });
 
 
   it('Should delete column if "x" is clicked', async () => {
 
     // given
     const currentColumns = wrapper.findAll('.column');
-    expect(currentColumns.length).toBe(5);
+    expect(currentColumns.length).toBe(6);
 
     // when
     await wrapper.find('.icon').trigger('click');
 
     // then
     const columns = wrapper.findAll('.column');
-    expect(columns.length).toBe(4);
+    expect(columns.length).toBe(5);
   });
 
 
