@@ -16,3 +16,6 @@ CI/CD:
 
 Containerization:
 - Docker
+
+## 📷 Images
+<img src="src/assets/mockups/TaskboardImg.png" width="800"/>
